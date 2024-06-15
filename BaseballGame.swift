@@ -51,7 +51,7 @@ class BaseballGame {
         while isCorrect {
             print("숫자를 입력하세요")
             if let input = Int(readLine()!) {
-                if Set(String(input)).count != 3 || Set(String(input)).contains("0") {
+                if Set(String(input)).count != 3 || Array(String(input))[0] == "0" {
                     print("올바르지 않은 입력값입니다")
                     print("==================================================")
                 } else {
@@ -122,11 +122,7 @@ class BaseballGame {
             testSet = Set(String(num))
             // 집합의 카운트가 3인경우 중복이 없으므로 루프 종료
             if testSet.count == 3 {
-                if testSet.contains("0") {
-                    continue
-                } else {
-                    return num
-                }
+                return num
             }
         }
     }
