@@ -116,7 +116,7 @@ class BaseballGame {
         // 루프 생성
         while true {
             // 랜덤 세자리 수 생성
-            let num: Int = Int.random(in: 111...999)
+            let num: Int = Int.random(in: 100...999)
             let testSet: Set<Character>
             // 집합의 특성(중복 제거)을 이용해 자리수 중복되는 숫자 체크
             testSet = Set(String(num))
