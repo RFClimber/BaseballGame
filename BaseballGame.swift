@@ -55,6 +55,11 @@ class BaseballGame {
                     print("올바르지 않은 입력값입니다")
                     print("==================================================")
                 } else {
+                    guard Array(String(input)).count == 3 else {
+                        print("올바르지 않은 입력값입니다")
+                        print("==================================================")
+                        continue
+                    }
                     counter += 1
                     var strike: Int = 0
                     var ball: Int = 0
